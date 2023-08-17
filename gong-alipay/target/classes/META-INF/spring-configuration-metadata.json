@@ -1,0 +1,63 @@
+{
+  "groups": [
+    {
+      "name": "alipay.config",
+      "type": "com.gong.alipay.properties.AliPayProperties",
+      "sourceType": "com.gong.alipay.properties.AliPayProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "alipay.config.alipay-public-key",
+      "type": "java.lang.String",
+      "sourceType": "com.gong.alipay.properties.AliPayProperties"
+    },
+    {
+      "name": "alipay.config.app-id",
+      "type": "java.lang.String",
+      "sourceType": "com.gong.alipay.properties.AliPayProperties"
+    },
+    {
+      "name": "alipay.config.charset",
+      "type": "java.lang.String",
+      "sourceType": "com.gong.alipay.properties.AliPayProperties"
+    },
+    {
+      "name": "alipay.config.format",
+      "type": "java.lang.String",
+      "sourceType": "com.gong.alipay.properties.AliPayProperties"
+    },
+    {
+      "name": "alipay.config.notify-url",
+      "type": "java.lang.String",
+      "sourceType": "com.gong.alipay.properties.AliPayProperties"
+    },
+    {
+      "name": "alipay.config.private-key",
+      "type": "java.lang.String",
+      "sourceType": "com.gong.alipay.properties.AliPayProperties"
+    },
+    {
+      "name": "alipay.config.return-url",
+      "type": "java.lang.String",
+      "sourceType": "com.gong.alipay.properties.AliPayProperties"
+    },
+    {
+      "name": "alipay.config.seller-id",
+      "type": "java.lang.String",
+      "sourceType": "com.gong.alipay.properties.AliPayProperties"
+    },
+    {
+      "name": "alipay.config.server-url",
+      "type": "java.lang.String",
+      "sourceType": "com.gong.alipay.properties.AliPayProperties",
+      "defaultValue": "https:\/\/openapi.alipay.com\/gateway.do"
+    },
+    {
+      "name": "alipay.config.sign-type",
+      "type": "java.lang.String",
+      "sourceType": "com.gong.alipay.properties.AliPayProperties"
+    }
+  ],
+  "hints": []
+}

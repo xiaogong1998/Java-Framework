@@ -1,0 +1,7 @@
+com\gong\alipay\properties\AliPayProperties.class
+com\gong\alipay\GongAlipayApplication.class
+com\gong\alipay\serviceImpl\AliPayServiceImpl.class
+com\gong\alipay\model\OrderModel.class
+com\gong\alipay\service\AliPayService.class
+com\gong\alipay\config\AliPayConfiguration.class
+META-INF\spring-configuration-metadata.json
