@@ -8,6 +8,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/kuaidi100/pom.xml" />
+        <option value="$PROJECT_DIR$/gong-kuaidi100/pom.xml" />
       </list>
     </option>
   </component>

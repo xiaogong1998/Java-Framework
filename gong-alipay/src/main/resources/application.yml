@@ -1,6 +1,6 @@
 alipay:
   config:
-    # \u6C99\u7BB1\u73AF\u5883\u5730\u5740\uFF0C\u6B63\u5F0F\u73AF\u5883\u53EF\u4E0D\u914D\u7F6E
+    # 沙箱环境地址，正式环境可不配置
     server-url: https://openapi-sandbox.dl.alipaydev.com/gateway.do
     seller-id: ??
     app-id: ??

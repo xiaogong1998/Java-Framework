@@ -6,16 +6,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gong-wechatpay" />
         <module name="gong-alipay" />
+        <module name="gong-kuaidi100" />
+        <module name="gong-wechatpay" />
         <module name="gong-core" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gong-alipay (1)" target="1.8" />
+      <module name="gong-alipay (2)" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="gong-alipay" options="-parameters" />
+      <module name="gong-alipay (1)" options="-parameters" />
+      <module name="gong-alipay (2)" options="-parameters" />
       <module name="gong-core" options="-parameters" />
+      <module name="gong-kuaidi100" options="-parameters" />
       <module name="gong-wechatpay" options="-parameters" />
     </option>
   </component>
