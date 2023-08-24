@@ -3,9 +3,17 @@
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/gong-alipay/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gong-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gong-hitokoto/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gong-kuaidi100/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gong-kuaidi100/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gong-wechatpay/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gong-qweather/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gong-qweather/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gong-scheduled/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gong-tianapi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gong-wechat/gong-wechat-pay/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gong-wechat/gong-wechat-subscription/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gong-wechat/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gong-wechat/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />

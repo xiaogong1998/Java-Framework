@@ -34,21 +34,20 @@
         </dependency>
 
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
+
     </dependencies>
 
     <modules>
         <module>gong-core</module>
         <module>gong-alipay</module>
-        <module>gong-wechatpay</module>
+        <module>gong-wechat</module>
+        <module>gong-kuaidi100</module>
+        <module>gong-hitokoto</module>
+        <module>gong-qweather</module>
     </modules>
 
 </project>

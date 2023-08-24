@@ -6,9 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gong-alipay" />
         <module name="gong-kuaidi100" />
-        <module name="gong-wechatpay" />
+        <module name="gong-wechat-subscription" />
+        <module name="gong-tianapi" />
+        <module name="gong-hitokoto" />
+        <module name="gong-qweather" />
+        <module name="gong-wechat-pay" />
+        <module name="gong-alipay" />
+        <module name="gong-scheduled" />
         <module name="gong-core" />
       </profile>
     </annotationProcessing>
@@ -23,8 +28,14 @@
       <module name="gong-alipay (1)" options="-parameters" />
       <module name="gong-alipay (2)" options="-parameters" />
       <module name="gong-core" options="-parameters" />
+      <module name="gong-hitokoto" options="-parameters" />
       <module name="gong-kuaidi100" options="-parameters" />
-      <module name="gong-wechatpay" options="-parameters" />
+      <module name="gong-qweather" options="-parameters" />
+      <module name="gong-scheduled" options="-parameters" />
+      <module name="gong-tianapi" options="-parameters" />
+      <module name="gong-wechat" options="" />
+      <module name="gong-wechat-pay" options="-parameters" />
+      <module name="gong-wechat-subscription" options="-parameters" />
     </option>
   </component>
 </project>

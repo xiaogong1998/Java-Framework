@@ -10,6 +10,13 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/kuaidi100/pom.xml" />
         <option value="$PROJECT_DIR$/gong-kuaidi100/pom.xml" />
+        <option value="$PROJECT_DIR$/gong-hitokoto/pom.xml" />
+        <option value="$PROJECT_DIR$/gong-weather/pom.xml" />
+        <option value="$PROJECT_DIR$/gong-qweather/pom.xml" />
+        <option value="$PROJECT_DIR$/gong-tianapi/pom.xml" />
+        <option value="$PROJECT_DIR$/gong-wechat/gong-wechat-pay/pom.xml" />
+        <option value="$PROJECT_DIR$/gong-wechat/gong-wechat-subscription/pom.xml" />
+        <option value="$PROJECT_DIR$/gong-scheduled/pom.xml" />
       </list>
     </option>
   </component>

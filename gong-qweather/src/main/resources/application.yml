@@ -1,0 +1,17 @@
+#和风天气
+qweather:
+  #主配置
+  config:
+    keyName: key_2022
+    publicId: HE2208240909381823
+    key: 1670ec93ade64d46a35bff01b3808b20
+    type: Web API
+  # 城市配置
+  city:
+    config:
+      city_name: 呼和浩特
+      apiUrl: https://geoapi.qweather.com
+  #天气配置
+  weather:
+    config:
+      apiUrl: https://devapi.qweather.com

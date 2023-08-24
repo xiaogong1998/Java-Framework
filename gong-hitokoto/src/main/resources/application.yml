@@ -1,0 +1,5 @@
+hitokoto:
+  config:
+    minLength: 0
+    maxLength: 30
+    c: Animation
