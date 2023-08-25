@@ -4,6 +4,9 @@ alipay:
     server-url: https://openapi-sandbox.dl.alipaydev.com/gateway.do
     seller-id: ??
     app-id: ??
+    app-cert-path: ??
+    aipay-public-cert-path: ??
+    root-cert-path: ??
     private-key: ??
     alipay-public-key: ??
     notify-url: ??

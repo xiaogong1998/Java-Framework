@@ -48,6 +48,8 @@
         <module>gong-kuaidi100</module>
         <module>gong-hitokoto</module>
         <module>gong-qweather</module>
+        <module>gong-scheduled</module>
+        <module>gong-tianapi</module>
     </modules>
 
 </project>

@@ -9,6 +9,7 @@ import org.springframework.scheduling.config.FixedRateTask;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import java.util.concurrent.BlockingQueue;
 
 @Service
 public class ScheduledTask {

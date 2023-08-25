@@ -36,47 +36,47 @@ public class AliPayServiceImpl implements AliPayService {
     private AliPayProperties aliPayProperties;
 
     @Override
-    public String aliPayAppTradeCreate(AlipayTradeAppPayModel model) {
+    public String aliPayAppTradePageCreate(AlipayTradeAppPayModel model) {
         try {
             AlipayTradeAppPayRequest request = new AlipayTradeAppPayRequest();
             request.setNotifyUrl(aliPayProperties.getNotifyUrl());
             request.setBizModel(model);
             AlipayTradeAppPayResponse response = alipayClient.pageExecute(request);
             if (response.isSuccess()) {
-                log.info("调用支付宝APP支付成功 ===> {}", response.getBody());
+                log.info("调用支付宝APP页面支付成功 ===> {}", response.getBody());
                 return response.getBody();
             } else {
-                log.info("调用支付宝APP支付失败，返回码 ===> {}，返回描述 ===> {}", response.getCode(), response.getMsg());
-                throw new ServiceException("创建支付宝APP交易订单失败，失败原因：" + response.getMsg());
+                log.info("调用支付宝APP页面支付失败，返回码 ===> {}，返回描述 ===> {}", response.getCode(), response.getMsg());
+                throw new ServiceException("创建支付宝APP页面交易订单失败，失败原因：" + response.getMsg());
             }
         } catch (AlipayApiException e) {
             e.printStackTrace();
-            throw new ServiceException("创建支付宝APP交易订单失败!");
+            throw new ServiceException("创建支付宝APP页面交易订单失败!");
         }
     }
 
     @Override
-    public String aliPayWapTradeCreate(AlipayTradeWapPayModel model) {
+    public String aliPayWapTradePageCreate(AlipayTradeWapPayModel model) {
         try {
             AlipayTradeWapPayRequest request = new AlipayTradeWapPayRequest();
             request.setNotifyUrl(aliPayProperties.getNotifyUrl());
             request.setBizModel(model);
             AlipayTradeWapPayResponse response = alipayClient.pageExecute(request);
             if (response.isSuccess()) {
-                log.info("调用支付宝手机网站支付成功 ===> {}", response.getBody());
+                log.info("调用支付宝手机网站页面支付成功 ===> {}", response.getBody());
                 return response.getBody();
             } else {
-                log.info("调用支付宝手机网站支付失败，返回码 ===> {}，返回描述 ===> {}", response.getCode(), response.getMsg());
-                throw new ServiceException("创建支付宝手机网站交易订单失败，失败原因：" + response.getMsg());
+                log.info("调用支付宝手机网站页面支付失败，返回码 ===> {}，返回描述 ===> {}", response.getCode(), response.getMsg());
+                throw new ServiceException("创建支付宝手机网站页面交易订单失败，失败原因：" + response.getMsg());
             }
         } catch (AlipayApiException e) {
             e.printStackTrace();
-            throw new ServiceException("创建支付宝手机网站交易订单失败!");
+            throw new ServiceException("创建支付宝手机网站页面交易订单失败!");
         }
     }
 
     @Override
-    public String aliPayPageTradeCreate(AlipayTradePagePayModel model) {
+    public String aliPayPageTradePageCreate(AlipayTradePagePayModel model) {
         try {
             AlipayTradePagePayRequest request = new AlipayTradePagePayRequest();
             request.setNotifyUrl(aliPayProperties.getNotifyUrl());
@@ -85,15 +85,77 @@ public class AliPayServiceImpl implements AliPayService {
             request.setBizModel(model);
             AlipayTradePagePayResponse response = alipayClient.pageExecute(request);
             if (response.isSuccess()) {
-                log.info("调用支付宝电脑网站支付成功 ===> {}", response.getBody());
+                log.info("调用支付宝电脑网站页面支付成功 ===> {}", response.getBody());
                 return response.getBody();
             } else {
-                log.info("调用支付宝电脑网站支付失败，返回码 ===> {}，返回描述 ===> {}", response.getCode(), response.getMsg());
-                throw new ServiceException("创建支付宝电脑网站交易订单失败，失败原因：" + response.getMsg());
+                log.info("调用支付宝电脑网站页面支付失败，返回码 ===> {}，返回描述 ===> {}", response.getCode(), response.getMsg());
+                throw new ServiceException("创建支付宝电脑网站页面交易订单失败，失败原因：" + response.getMsg());
             }
         } catch (AlipayApiException e) {
             e.printStackTrace();
-            throw new ServiceException("创建支付宝电脑网站交易订单失败!");
+            throw new ServiceException("创建支付宝电脑网站页面交易订单失败!");
+        }
+    }
+
+    @Override
+    public String aliPayAppTradeSdkCreate(AlipayTradeAppPayModel model) {
+        try {
+            AlipayTradeAppPayRequest request = new AlipayTradeAppPayRequest();
+            request.setNotifyUrl(aliPayProperties.getNotifyUrl());
+            request.setBizModel(model);
+            AlipayTradeAppPayResponse response = alipayClient.sdkExecute(request);
+            if (response.isSuccess()) {
+                log.info("调用支付宝APP SDK支付成功 ===> {}", response.getBody());
+                return response.getBody();
+            } else {
+                log.info("调用支付宝APP SDK支付失败，返回码 ===> {}，返回描述 ===> {}", response.getCode(), response.getMsg());
+                throw new ServiceException("创建支付宝APP SDK交易订单失败，失败原因：" + response.getMsg());
+            }
+        } catch (AlipayApiException e) {
+            e.printStackTrace();
+            throw new ServiceException("创建支付宝APP SDK交易订单失败!");
+        }
+    }
+
+    @Override
+    public String aliPayWapTradeSdkCreate(AlipayTradeWapPayModel model) {
+        try {
+            AlipayTradeWapPayRequest request = new AlipayTradeWapPayRequest();
+            request.setNotifyUrl(aliPayProperties.getNotifyUrl());
+            request.setBizModel(model);
+            AlipayTradeWapPayResponse response = alipayClient.sdkExecute(request);
+            if (response.isSuccess()) {
+                log.info("调用支付宝手机网站SDK支付成功 ===> {}", response.getBody());
+                return response.getBody();
+            } else {
+                log.info("调用支付宝手机网站SDK支付失败，返回码 ===> {}，返回描述 ===> {}", response.getCode(), response.getMsg());
+                throw new ServiceException("创建支付宝手机网站SDK交易订单失败，失败原因：" + response.getMsg());
+            }
+        } catch (AlipayApiException e) {
+            e.printStackTrace();
+            throw new ServiceException("创建支付宝手机网站SDK交易订单失败!");
+        }
+    }
+
+    @Override
+    public String aliPayPageTradeSdkCreate(AlipayTradePagePayModel model) {
+        try {
+            AlipayTradePagePayRequest request = new AlipayTradePagePayRequest();
+            request.setNotifyUrl(aliPayProperties.getNotifyUrl());
+            request.setReturnUrl(aliPayProperties.getReturnUrl());
+            model.setProductCode("FAST_INSTANT_TRADE_PAY");
+            request.setBizModel(model);
+            AlipayTradePagePayResponse response = alipayClient.sdkExecute(request);
+            if (response.isSuccess()) {
+                log.info("调用支付宝电脑网站SDK支付成功 ===> {}", response.getBody());
+                return response.getBody();
+            } else {
+                log.info("调用支付宝电脑网站SDK支付失败，返回码 ===> {}，返回描述 ===> {}", response.getCode(), response.getMsg());
+                throw new ServiceException("创建支付宝电脑网站SDK交易订单失败，失败原因：" + response.getMsg());
+            }
+        } catch (AlipayApiException e) {
+            e.printStackTrace();
+            throw new ServiceException("创建支付宝电脑网站SDK交易订单失败!");
         }
     }
 }

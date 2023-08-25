@@ -26,8 +26,7 @@ public enum WeatherDaysEnum implements BaseEnum<String> {
         return value;
     }
 
-    @Override
-    public WeatherDaysEnum findByValue(String value) {
+    public static WeatherDaysEnum findByValue(String value) {
         for (WeatherDaysEnum weatherDaysEnum : values()) {
             if (weatherDaysEnum.value.equals(value)) {
                 return weatherDaysEnum;

@@ -7,7 +7,6 @@
         <groupId>com.gong</groupId>
         <artifactId>gong-wechat</artifactId>
         <version>1.0.0</version>
-        <relativePath/>
     </parent>
 
     <artifactId>gong-wechat-pay</artifactId>

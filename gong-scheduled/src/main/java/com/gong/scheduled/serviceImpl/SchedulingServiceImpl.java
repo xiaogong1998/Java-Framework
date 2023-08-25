@@ -14,7 +14,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class SchedulingServiceImpl implements SchedulingService {
 
-    private TaskScheduler taskScheduler;
+    private final TaskScheduler taskScheduler;
 
     private final Map<String, ScheduledTask> tasks = new ConcurrentHashMap<>();
 
@@ -29,6 +29,7 @@ public class SchedulingServiceImpl implements SchedulingService {
      * @param taskId
      * @param task
      */
+    @Override
     public void addTriggerTask(String taskId, TriggerTask task) {
         if (this.tasks.containsKey(taskId)) {
             throw new SchedulingException("the taskId[" + taskId + "] was added.");
@@ -47,6 +48,7 @@ public class SchedulingServiceImpl implements SchedulingService {
      * @param taskId
      * @param task
      */
+    @Override
     public void addFixedRateTask(String taskId, FixedRateTask task) {
         if (this.tasks.containsKey(taskId)) {
             throw new SchedulingException("the taskId[" + taskId + "] was added.");
@@ -69,6 +71,7 @@ public class SchedulingServiceImpl implements SchedulingService {
      * @param taskId
      * @param task
      */
+    @Override
     public void addFixedDelayTask(String taskId, FixedDelayTask task) {
         if (this.tasks.containsKey(taskId)) {
             throw new SchedulingException("the taskId[" + taskId + "] was added.");
@@ -90,6 +93,7 @@ public class SchedulingServiceImpl implements SchedulingService {
      *
      * @param taskId
      */
+    @Override
     public void cancelTask(String taskId) {
         ScheduledTask scheduledTask = this.tasks.get(taskId);
         if (scheduledTask != null) {
@@ -104,6 +108,7 @@ public class SchedulingServiceImpl implements SchedulingService {
      * @param taskId
      * @param task
      */
+    @Override
     public void resetTask(String taskId, TriggerTask task) {
         cancelTask(taskId);
         addTriggerTask(taskId, task);
@@ -115,6 +120,7 @@ public class SchedulingServiceImpl implements SchedulingService {
      * @param taskId
      * @param task
      */
+    @Override
     public void resetTask(String taskId, FixedRateTask task) {
         cancelTask(taskId);
         addFixedRateTask(taskId, task);
@@ -126,6 +132,7 @@ public class SchedulingServiceImpl implements SchedulingService {
      * @param taskId
      * @param task
      */
+    @Override
     public void resetTask(String taskId, FixedDelayTask task) {
         cancelTask(taskId);
         addFixedDelayTask(taskId, task);
@@ -137,7 +144,17 @@ public class SchedulingServiceImpl implements SchedulingService {
      * @param taskId
      * @return
      */
+    @Override
     public boolean hasTask(String taskId) {
         return this.tasks.containsKey(taskId);
+    }
+
+    /**
+     * 获取当前所以任务
+     * @return
+     */
+    @Override
+    public Map<String, ScheduledTask> getTasks() {
+        return this.tasks;
     }
 }

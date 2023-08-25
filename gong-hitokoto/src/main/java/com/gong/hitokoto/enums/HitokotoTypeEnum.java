@@ -31,8 +31,7 @@ public enum HitokotoTypeEnum implements BaseEnum<String> {
         return value;
     }
 
-    @Override
-    public BaseEnum<String> findByValue(String value) {
+    public static HitokotoTypeEnum findByValue(String value) {
         for (HitokotoTypeEnum hitokotoTypeEnum : values()) {
             if(hitokotoTypeEnum.value.equals(value)){
                 return hitokotoTypeEnum;

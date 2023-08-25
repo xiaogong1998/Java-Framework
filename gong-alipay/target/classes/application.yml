@@ -1,9 +1,0 @@
-alipay:
-  config:
-    # 沙箱环境地址，正式环境可不配置
-    server-url: https://openapi-sandbox.dl.alipaydev.com/gateway.do
-    seller-id: ??
-    app-id: ??
-    private-key: ??
-    alipay-public-key: ??
-    notify-url: ??

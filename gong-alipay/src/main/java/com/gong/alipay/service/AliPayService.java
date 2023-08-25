@@ -3,7 +3,6 @@ package com.gong.alipay.service;
 import com.alipay.api.domain.AlipayTradeAppPayModel;
 import com.alipay.api.domain.AlipayTradePagePayModel;
 import com.alipay.api.domain.AlipayTradeWapPayModel;
-import com.gong.alipay.model.OrderModel;
 
 /**
  * TODO 阿里支付
@@ -14,27 +13,51 @@ import com.gong.alipay.model.OrderModel;
 public interface AliPayService {
 
     /**
-     * App创建订单
+     * App创建页面订单
      *
      * @param model
      * @return
      */
-    String aliPayAppTradeCreate(AlipayTradeAppPayModel model);
+    String aliPayAppTradePageCreate(AlipayTradeAppPayModel model);
 
     /**
-     * 手机网站创创建订单
+     * 手机网站创创建页面订单
      *
      * @param model
      * @return
      */
-    String aliPayWapTradeCreate(AlipayTradeWapPayModel model);
+    String aliPayWapTradePageCreate(AlipayTradeWapPayModel model);
 
     /**
-     * 电脑网站创建订单
+     * 电脑网站创建页面订单
      *
      * @param model
      * @return
      */
-    String aliPayPageTradeCreate(AlipayTradePagePayModel model);
+    String aliPayPageTradePageCreate(AlipayTradePagePayModel model);
+
+    /**
+     * App创建SDK订单
+     *
+     * @param model
+     * @return
+     */
+    String aliPayAppTradeSdkCreate(AlipayTradeAppPayModel model);
+
+    /**
+     * 手机网站创创建SDK订单
+     *
+     * @param model
+     * @return
+     */
+    String aliPayWapTradeSdkCreate(AlipayTradeWapPayModel model);
+
+    /**
+     * 电脑网站创建SDK订单
+     *
+     * @param model
+     * @return
+     */
+    String aliPayPageTradeSdkCreate(AlipayTradePagePayModel model);
 
 }
