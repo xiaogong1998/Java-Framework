@@ -1,0 +1,7 @@
+com\gong\tianapi\GongTianapiApplication.class
+com\gong\tianapi\entity\TianApiCaiHongPiEntity.class
+com\gong\tianapi\serviceImpl\TianApiCaiHongPiServiceImpl.class
+com\gong\tianapi\entity\TianApiCaiHongPiResponse.class
+META-INF\spring-configuration-metadata.json
+com\gong\tianapi\properties\TianApiProperties.class
+com\gong\tianapi\service\TianApiCaiHongPiService.class

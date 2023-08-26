@@ -1,0 +1,14 @@
+D:\project\Java-Framework\gong-qweather\src\main\java\com\gong\qweather\service\QWeatherService.java
+D:\project\Java-Framework\gong-qweather\src\main\java\com\gong\qweather\entity\WeatherNowEntity.java
+D:\project\Java-Framework\gong-qweather\src\main\java\com\gong\qweather\entity\WeatherDailyEntity.java
+D:\project\Java-Framework\gong-qweather\src\main\java\com\gong\qweather\GongWeatherApplication.java
+D:\project\Java-Framework\gong-qweather\src\main\java\com\gong\qweather\entity\WeatherResponse.java
+D:\project\Java-Framework\gong-qweather\src\main\java\com\gong\qweather\serviceImpl\QWeatherServiceImpl.java
+D:\project\Java-Framework\gong-qweather\src\main\java\com\gong\qweather\entity\LocationResponse.java
+D:\project\Java-Framework\gong-qweather\src\main\java\com\gong\qweather\enums\WeatherDaysEnum.java
+D:\project\Java-Framework\gong-qweather\src\main\java\com\gong\qweather\properties\QweatherWeatherProperties.java
+D:\project\Java-Framework\gong-qweather\src\main\java\com\gong\qweather\service\QWeatherCityService.java
+D:\project\Java-Framework\gong-qweather\src\main\java\com\gong\qweather\entity\LocationEntity.java
+D:\project\Java-Framework\gong-qweather\src\main\java\com\gong\qweather\properties\QweatherProperties.java
+D:\project\Java-Framework\gong-qweather\src\main\java\com\gong\qweather\properties\QweatherCityProperties.java
+D:\project\Java-Framework\gong-qweather\src\main\java\com\gong\qweather\serviceImpl\QWeatherCityServiceImpl.java

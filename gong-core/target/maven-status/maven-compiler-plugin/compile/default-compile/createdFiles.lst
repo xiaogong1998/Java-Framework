@@ -1,0 +1,5 @@
+com\gong\core\GongCoreApplication.class
+com\gong\core\annotation\BaseEnum.class
+com\gong\core\exception\ServiceException.class
+com\gong\core\utils\HttpClientUtil.class
+com\gong\core\utils\RandomColorUtils.class

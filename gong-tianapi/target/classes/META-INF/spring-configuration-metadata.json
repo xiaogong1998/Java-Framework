@@ -1,0 +1,23 @@
+{
+  "groups": [
+    {
+      "name": "tianapi.config",
+      "type": "com.gong.tianapi.properties.TianApiProperties",
+      "sourceType": "com.gong.tianapi.properties.TianApiProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "tianapi.config.api-url",
+      "type": "java.lang.String",
+      "sourceType": "com.gong.tianapi.properties.TianApiProperties",
+      "defaultValue": "https:\/\/apis.tianapi.com"
+    },
+    {
+      "name": "tianapi.config.key",
+      "type": "java.lang.String",
+      "sourceType": "com.gong.tianapi.properties.TianApiProperties"
+    }
+  ],
+  "hints": []
+}

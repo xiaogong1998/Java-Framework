@@ -1,0 +1,7 @@
+com\gong\hitokoto\enums\HitokotoTypeEnum.class
+com\gong\hitokoto\properties\HitokotoProperties.class
+com\gong\hitokoto\service\HitokotoService.class
+com\gong\hitokoto\entity\HirohitoResponse.class
+com\gong\hitokoto\GongHitokotoApplication.class
+META-INF\spring-configuration-metadata.json
+com\gong\hitokoto\serviceImpl\HitokotoServiceImpl.class
