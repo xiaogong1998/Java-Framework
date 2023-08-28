@@ -1,6 +1,0 @@
-wechat:
-  mp:
-    config:
-      apiUrl: https://api.weixin.qq.com
-      appId: wxbfd848c6040f114e
-      appSecret: 7ffcb42de1c760e19950098f7c3a153d

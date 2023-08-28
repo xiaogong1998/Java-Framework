@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.gong.qweather.serviceImpl.QWeatherServiceImplTest
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.365 s - in com.gong.qweather.serviceImpl.QWeatherServiceImplTest

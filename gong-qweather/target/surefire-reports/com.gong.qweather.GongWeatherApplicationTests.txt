@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.gong.qweather.GongWeatherApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.178 s - in com.gong.qweather.GongWeatherApplicationTests

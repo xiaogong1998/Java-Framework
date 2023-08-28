@@ -1,6 +1,8 @@
 package com.gong.alipay.model;
 
+import java.io.Serial;
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * TODO 订单
@@ -8,12 +10,13 @@ import java.io.Serializable;
  * @author xiaogong
  * @since 2023/8/16 15:01
  */
-public class OrderModel implements Serializable {
+public abstract class OrderModel implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private String outTradeNo;
 
-    private String totalAmount;
+    private BigDecimal totalAmount;
 
     private String subject;
 
@@ -27,11 +30,11 @@ public class OrderModel implements Serializable {
         this.outTradeNo = outTradeNo;
     }
 
-    public String getTotalAmount() {
+    public BigDecimal getTotalAmount() {
         return totalAmount;
     }
 
-    public void setTotalAmount(String totalAmount) {
+    public void setTotalAmount(BigDecimal totalAmount) {
         this.totalAmount = totalAmount;
     }
 

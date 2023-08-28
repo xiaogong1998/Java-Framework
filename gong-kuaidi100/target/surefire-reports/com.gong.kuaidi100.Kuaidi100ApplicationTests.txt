@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.gong.kuaidi100.Kuaidi100ApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.114 s - in com.gong.kuaidi100.Kuaidi100ApplicationTests

@@ -3,6 +3,11 @@ package com.gong.alipay.service;
 import com.alipay.api.domain.AlipayTradeAppPayModel;
 import com.alipay.api.domain.AlipayTradePagePayModel;
 import com.alipay.api.domain.AlipayTradeWapPayModel;
+import com.gong.alipay.model.OrderModel;
+
+import java.util.Map;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 /**
  * TODO 阿里支付
@@ -60,4 +65,13 @@ public interface AliPayService {
      */
     String aliPayPageTradeSdkCreate(AlipayTradePagePayModel model);
 
+    /**
+     * 异步校验
+     *
+     * @param params   支付宝返回参数
+     * @param supplier 订单
+     * @param runnable 验签成功后执行的处理
+     * @return 验签结果
+     */
+    String alipayTradeNotify(Map<String, String> params, Function<String, OrderModel> function, Runnable runnable);
 }
