@@ -69,7 +69,7 @@ public interface AliPayService {
      * 异步校验
      *
      * @param params   支付宝返回参数
-     * @param supplier 订单
+     * @param function 订单查询（传入订单号，返回订单信息）
      * @param runnable 验签成功后执行的处理
      * @return 验签结果
      */
