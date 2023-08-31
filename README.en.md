@@ -1,36 +1,44 @@
 # Java-Framework
 
-#### Description
-{**When you're done, you can delete the content in this README and update the file with details for others getting started with your repository**}
+#### Java Framework is a personally written Spring Boot based framework designed to provide a series of commonly used functional modules for developers to quickly build applications.
 
-#### Software Architecture
-Software architecture description
+## framework module
+* `gong-core`：Common modules, including some common tool classes and methods, are used to simplify common operations in the development process.
 
-#### Installation
+* `gong-alipay`：The Alibaba payment module integrates the Alibaba payment function to facilitate developers to access Alipay payment services in their applications.
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+* `gong-hitokoto`：The One Word Quotations module provides the function of obtaining random One Word quotations, which can be used to display random sentences or maxims in applications.
 
-#### Instructions
+* `gong-qweather`：The Hefeng Weather module integrates the Hefeng Weather API to obtain real-time weather information and forecasts, helping developers achieve weather related functions.
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+* `gong-scheduled`：The automatic task module provides the function of timed tasks, making it easy to configure and manage scheduled tasks.
 
-#### Contribution
+* `gong-kuaidi100`：The express delivery 100 module integrates the interface of express delivery 100, which can achieve express delivery query function and facilitate users to track express logistics information.
 
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
+* `gong-tianapi`：The Rainbow Fart module provides the function of obtaining random Rainbow Fart, which can be used to send warm, positive energy words to users.
 
+* `gong-wechat-pay`：The WeChat payment module integrates the WeChat payment function, making it convenient for developers to access WeChat payment services in their applications.
 
-#### Gitee Feature
+* `gong-wechat-subscription`：The WeChat subscription account module provides the function of interacting with the WeChat subscription account, which can achieve message push function.
 
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+## use method
+
+#### You can use the Gong Java framework by following these steps:
+
+1.Introduce the required module dependencies in your project. For example, if you need to use the Alibaba payment module, you can add the following dependencies in the pom.xml file:
+
+```
+<dependency>
+    <groupId>com.gong</groupId>
+    <artifactId>gong-alipay</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+2.Configure and use the corresponding functions based on the documentation and sample code provided by each module.
+
+3.Build and run your project, enjoying the convenience and functionality provided by the Gong Java framework.
+
+Please note that this framework is only for personal learning and development use. During use, please comply with relevant laws and regulations as well as the regulations of service providers such as Alibaba Pay and WeChat Pay.
+
+Welcome to use Mr. Gong's Java Framework. If you encounter any problems or have any suggestions during use, please feel free to contact me at any time. Thank you for your support!

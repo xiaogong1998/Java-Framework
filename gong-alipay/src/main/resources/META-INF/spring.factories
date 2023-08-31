@@ -1,4 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.gong.alipay.serviceImpl.AliPayServiceImpl,\
-com.gong.alipay.config.AliPayConfiguration,\
-com.gong.alipay.properties.AliPayProperties

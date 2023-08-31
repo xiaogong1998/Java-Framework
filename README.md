@@ -1,39 +1,44 @@
 # Java-Framework
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+#### Java-Framework是一个个人编写的基于Spring Boot的框架，旨在提供一系列常用功能模块，方便开发者快速构建应用程序。
 
-#### 软件架构
-软件架构说明
+## 框架模块
+* `gong-core`：公共模块，包含一些通用的工具类和方法，用于简化开发过程中的常见操作。
 
+* `gong-alipay`：阿里支付模块，集成了阿里支付功能，方便开发者在应用中接入支付宝支付服务。
 
-#### 安装教程
+* `gong-hitokoto`：一言语录模块，提供了获取随机一言语录的功能，可以用于在应用中展示随机的句子或格言。
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+* `gong-qweather`：和风天气模块，集成了和风天气API，可以获取实时天气信息和天气预报，帮助开发者实现天气相关功能。
 
-#### 使用说明
+* `gong-scheduled`：自动任务模块，提供了定时任务的功能，可以方便地配置和管理定时执行的任务。
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+* `gong-kuaidi100`：快递100模块，集成了快递100的接口，可以实现快递查询功能，方便用户跟踪快递物流信息。
 
-#### 参与贡献
+* `gong-tianapi`：彩虹屁模块，提供了获取随机彩虹屁的功能，可以用于给用户发送一些温暖的、正能量的话语。
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+* `gong-wechat-pay`：微信支付模块，集成了微信支付功能，方便开发者在应用中接入微信支付服务。
 
+* `gong-wechat-subscription`：微信订阅号模块，提供了与微信订阅号进行交互的功能，可以实现消息推送功能。
 
-#### 特技
+## 使用方法
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+#### 您可以按照以下步骤使用Gong Java框架：
+
+1.在您的项目中引入所需的模块依赖，例如，如果您需要使用阿里支付模块，可以在pom.xml文件中添加以下依赖：
+
+```
+<dependency>
+    <groupId>com.gong</groupId>
+    <artifactId>gong-alipay</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+2.根据每个模块提供的文档和示例代码，配置和使用相应的功能。
+
+3.构建和运行您的项目，享受Gong Java框架提供的便利和功能。
+
+请注意，该框架仅供个人学习和开发使用，使用过程中请遵守相关法律法规和阿里支付、微信支付等服务提供商的规定。
+
+欢迎您使用巩先生的Java-Framework，如果您在使用过程中遇到任何问题或有任何建议，请随时联系我。感谢您的支持！
