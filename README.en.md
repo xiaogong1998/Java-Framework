@@ -37,7 +37,7 @@
 
 2.Configure and use the corresponding functions based on the documentation and sample code provided by each module.
 
-3.Build and run your project, enjoying the convenience and functionality provided by the Gong Java framework.
+3.Build and run your project, enjoying the convenience and functionality provided by the Java Framework.
 
 Please note that this framework is only for personal learning and development use. During use, please comply with relevant laws and regulations as well as the regulations of service providers such as Alibaba Pay and WeChat Pay.
 
