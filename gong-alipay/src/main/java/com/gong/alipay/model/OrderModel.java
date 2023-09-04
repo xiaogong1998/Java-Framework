@@ -15,3 +15,4 @@ public abstract class OrderModel implements Serializable {
 
     public abstract BigDecimal getTotalAmount();
 }
+ 
