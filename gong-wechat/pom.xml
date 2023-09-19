@@ -25,5 +25,6 @@
     <modules>
         <module>gong-wechat-pay</module>
         <module>gong-wechat-subscription</module>
+        <module>gong-wechat-applet</module>
     </modules>
 </project>

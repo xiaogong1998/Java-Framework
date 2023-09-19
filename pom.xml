@@ -84,6 +84,7 @@
         <module>gong-qweather</module>
         <module>gong-scheduled</module>
         <module>gong-tianapi</module>
+        <module>gong-websocket</module>
     </modules>
 
 </project>
