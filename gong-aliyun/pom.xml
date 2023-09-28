@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.gong</groupId>
+        <artifactId>Java-Framework</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>gong-aliyun</artifactId>
+    <version>1.0.0</version>
+    <name>gong-aliyun</name>
+    <description>gong-aliyun</description>
+    <packaging>pom</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.gong</groupId>
+            <artifactId>gong-core</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+
+    <modules>
+        <module>gong-aliyun-pay</module>
+        <module>gong-aliyun-oss</module>
+    </modules>
+
+</project>

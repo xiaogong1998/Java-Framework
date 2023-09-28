@@ -1,7 +1,6 @@
 package com.gong.wechat.subscription.serviceImpl;
 
-import com.gong.wechat.subscription.entity.MessageTemplate;
-import com.gong.wechat.subscription.service.SubscriptionMessageService;
+import com.gong.wechat.subscription.model.MessageTemplate;
 import com.gong.wechat.subscription.service.SubscriptionService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

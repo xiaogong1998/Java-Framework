@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Getter
 @Setter
 @Component
-@ConfigurationProperties(prefix = "wechat.applet.config", ignoreUnknownFields = true)
+@ConfigurationProperties(prefix = "wechat.config.applet", ignoreUnknownFields = true)
 public class WechatAppletProperties {
 
     private String apiUrl = "https://api.weixin.qq.com/sns/jscode2session";

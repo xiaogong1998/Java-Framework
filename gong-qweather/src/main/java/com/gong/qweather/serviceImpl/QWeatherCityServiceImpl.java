@@ -2,7 +2,7 @@ package com.gong.qweather.serviceImpl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.gong.core.utils.HttpClientUtil;
-import com.gong.qweather.entity.LocationResponse;
+import com.gong.qweather.model.LocationResponse;
 import com.gong.qweather.properties.QweatherCityProperties;
 import com.gong.qweather.properties.QweatherProperties;
 import com.gong.qweather.service.QWeatherCityService;

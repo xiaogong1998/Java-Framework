@@ -1,6 +1,6 @@
 package com.gong.scheduled.serviceImpl;
 
-import com.gong.scheduled.entity.ScheduledTask;
+import com.gong.scheduled.task.ScheduledTask;
 import com.gong.scheduled.service.SchedulingService;
 import org.springframework.scheduling.SchedulingException;
 import org.springframework.scheduling.TaskScheduler;

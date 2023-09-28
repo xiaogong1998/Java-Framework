@@ -1,7 +1,7 @@
 package com.gong.tianapi.service;
 
 
-import com.gong.tianapi.entity.TianApiCaiHongPiResponse;
+import com.gong.tianapi.model.TianApiCaiHongPiResponse;
 
 public interface TianApiCaiHongPiService {
 

@@ -2,7 +2,7 @@ package com.gong.wechat.subscription.serviceImpl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.gong.core.utils.HttpClientUtil;
-import com.gong.wechat.subscription.entity.AccessTokenResponse;
+import com.gong.wechat.subscription.model.AccessTokenResponse;
 import com.gong.wechat.subscription.properties.SubscriptionProperties;
 import com.gong.wechat.subscription.service.SubscriptionAccessToken;
 import org.apache.commons.lang3.StringUtils;

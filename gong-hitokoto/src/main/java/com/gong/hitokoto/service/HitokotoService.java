@@ -1,7 +1,7 @@
 package com.gong.hitokoto.service;
 
 
-import com.gong.hitokoto.entity.HirohitoResponse;
+import com.gong.hitokoto.model.HirohitoResponse;
 
 public interface HitokotoService {
 

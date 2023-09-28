@@ -1,10 +1,8 @@
 package com.gong.qweather.serviceImpl;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.gong.core.utils.HttpClientUtil;
-import com.gong.qweather.entity.WeatherResponse;
+import com.gong.qweather.model.WeatherResponse;
 import com.gong.qweather.enums.WeatherDaysEnum;
 import com.gong.qweather.properties.QweatherProperties;
 import com.gong.qweather.properties.QweatherWeatherProperties;

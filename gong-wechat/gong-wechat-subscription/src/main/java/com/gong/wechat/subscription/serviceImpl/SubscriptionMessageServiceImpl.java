@@ -3,9 +3,9 @@ package com.gong.wechat.subscription.serviceImpl;
 import com.alibaba.fastjson.JSONObject;
 import com.gong.core.utils.HttpClientUtil;
 import com.gong.core.utils.RandomColorUtils;
-import com.gong.wechat.subscription.entity.MessageRequest;
-import com.gong.wechat.subscription.entity.MessageResponse;
-import com.gong.wechat.subscription.entity.MessageTemplate;
+import com.gong.wechat.subscription.model.MessageRequest;
+import com.gong.wechat.subscription.model.MessageResponse;
+import com.gong.wechat.subscription.model.MessageTemplate;
 import com.gong.wechat.subscription.enums.MessageErrEnum;
 import com.gong.wechat.subscription.properties.SubscriptionProperties;
 import com.gong.wechat.subscription.service.SubscriptionAccessToken;
@@ -43,7 +43,7 @@ public class SubscriptionMessageServiceImpl implements SubscriptionMessageServic
      */
     public MessageResponse send(String toUser, String templateId, Map<String, MessageTemplate> message) {
         String randomColor = RandomColorUtils.getRandomColor();
-        return send(toUser, randomColor, templateId, message);
+        return this.send(toUser, randomColor, templateId, message);
     }
 
     /**
@@ -60,7 +60,7 @@ public class SubscriptionMessageServiceImpl implements SubscriptionMessageServic
         request.setTemplateId(templateId);
         request.setTopColor(topColor);
         request.setData(message);
-        return send(request);
+        return this.send(request);
     }
 
     /**
@@ -75,7 +75,7 @@ public class SubscriptionMessageServiceImpl implements SubscriptionMessageServic
         url.append("?access_token=").append(subscriptionAccessToken.getAccessToken());
         String body = JSONObject.toJSONString(request);
         MessageResponse response = httpClient.postJson(url.toString(), body).map(r -> {
-            log.info("accessToken response : {}", r);
+            log.info("push response : {}", r);
             return JSONObject.parseObject(r, MessageResponse.class);
         }).orElse(null);
 

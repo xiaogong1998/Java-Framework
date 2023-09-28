@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Getter
 @Setter
 @Component
-@ConfigurationProperties(prefix = "wechat.mp.config", ignoreUnknownFields = true)
+@ConfigurationProperties(prefix = "wechat.config.mp", ignoreUnknownFields = true)
 public class SubscriptionProperties {
 
     private String apiUrl = "https://api.weixin.qq.com";

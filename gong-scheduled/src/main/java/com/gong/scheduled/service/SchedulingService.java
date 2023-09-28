@@ -1,12 +1,11 @@
 package com.gong.scheduled.service;
 
-import com.gong.scheduled.entity.ScheduledTask;
+import com.gong.scheduled.task.ScheduledTask;
 import org.springframework.scheduling.config.FixedDelayTask;
 import org.springframework.scheduling.config.FixedRateTask;
 import org.springframework.scheduling.config.TriggerTask;
 
 import java.util.Map;
-import java.util.concurrent.BlockingQueue;
 
 public interface SchedulingService {
 

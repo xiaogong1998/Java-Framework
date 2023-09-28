@@ -1,7 +1,7 @@
 package com.gong.qweather.service;
 
 
-import com.gong.qweather.entity.LocationResponse;
+import com.gong.qweather.model.LocationResponse;
 
 public interface QWeatherCityService {
 

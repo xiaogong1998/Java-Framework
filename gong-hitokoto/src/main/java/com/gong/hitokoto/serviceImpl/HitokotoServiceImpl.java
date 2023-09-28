@@ -2,7 +2,7 @@ package com.gong.hitokoto.serviceImpl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.gong.core.utils.HttpClientUtil;
-import com.gong.hitokoto.entity.HirohitoResponse;
+import com.gong.hitokoto.model.HirohitoResponse;
 import com.gong.hitokoto.properties.HitokotoProperties;
 import com.gong.hitokoto.service.HitokotoService;
 import org.apache.commons.lang3.ObjectUtils;

@@ -1,8 +1,8 @@
 package com.gong.wechat.subscription.service;
 
 
-import com.gong.wechat.subscription.entity.MessageTemplate;
-import com.gong.wechat.subscription.entity.MessageResponse;
+import com.gong.wechat.subscription.model.MessageTemplate;
+import com.gong.wechat.subscription.model.MessageResponse;
 
 import java.util.Map;
 

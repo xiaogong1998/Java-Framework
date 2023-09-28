@@ -2,7 +2,7 @@ package com.gong.tianapi.serviceImpl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.gong.core.utils.HttpClientUtil;
-import com.gong.tianapi.entity.TianApiCaiHongPiResponse;
+import com.gong.tianapi.model.TianApiCaiHongPiResponse;
 import com.gong.tianapi.properties.TianApiProperties;
 import com.gong.tianapi.service.TianApiCaiHongPiService;
 import org.slf4j.Logger;
