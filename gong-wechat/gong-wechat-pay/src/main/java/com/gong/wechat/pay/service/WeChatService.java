@@ -17,5 +17,21 @@ public interface WeChatService {
      * @param request
      * @return
      */
-    String appPrepayCreate(PrepayRequest request);
+    String appPrepayCreate(com.wechat.pay.java.service.payments.app.model.PrepayRequest request);
+
+    /**
+     * JSAPI预付订单创建
+     *
+     * @param request
+     * @return
+     */
+    String jsapiPrepayCreate(com.wechat.pay.java.service.payments.jsapi.model.PrepayRequest request);
+
+    /**
+     * 退款申请
+     * @param request
+     * @return
+     */
+    public com.wechat.pay.java.service.refund.model.Refund refundCreate(com.wechat.pay.java.service.refund.model.CreateRequest request);
+
 }

@@ -3,10 +3,10 @@ package com.gong.baidu.translate.serviceImpl;
 import cn.hutool.core.util.RandomUtil;
 import cn.hutool.crypto.SecureUtil;
 import com.alibaba.fastjson.JSONObject;
-import com.gong.baidu.translate.enums.LanguageEnum;
 import com.gong.baidu.translate.enums.TranslationTypeEnum;
 import com.gong.baidu.translate.model.CommonTextRequest;
 import com.gong.baidu.translate.model.CommonTextResponse;
+import com.gong.baidu.translate.model.TransResultModel;
 import com.gong.baidu.translate.properties.BaiduTranslateProperties;
 import com.gong.baidu.translate.service.BaiduTranslateService;
 import com.gong.core.utils.HttpClientUtil;
@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 
 /**
- * TODO 登录实现
+ * TODO 百度翻译
  *
  * @author xiaogong
  * @since 2023/9/19 8:58
@@ -33,6 +33,18 @@ public class BaiduTranslateServiceImpl implements BaiduTranslateService {
 
     @Resource
     private BaiduTranslateProperties properties;
+
+    public String commonTextTranslateResult(CommonTextRequest request){
+        CommonTextResponse commonTextResponse = this.commonTextTranslate(request);
+        if(null == commonTextResponse){
+            return null;
+        }
+        TransResultModel transResultModel = commonTextResponse.getTransResult().stream().findFirst().orElse(null);
+        if(null == transResultModel){
+            return null;
+        }
+        return transResultModel.getDst();
+    }
 
     @Override
     public CommonTextResponse commonTextTranslate(CommonTextRequest request) {

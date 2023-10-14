@@ -5,8 +5,10 @@ import com.gong.core.exception.ServiceException;
 import com.gong.wechat.pay.properties.WeChatPayProperties;
 import com.gong.wechat.pay.service.WeChatService;
 import com.wechat.pay.java.service.payments.app.AppService;
-import com.wechat.pay.java.service.payments.app.model.PrepayRequest;
-import com.wechat.pay.java.service.payments.app.model.PrepayResponse;
+import com.wechat.pay.java.service.payments.jsapi.JsapiService;
+import com.wechat.pay.java.service.refund.RefundService;
+import com.wechat.pay.java.service.refund.model.CreateRequest;
+import com.wechat.pay.java.service.refund.model.Refund;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -28,11 +30,17 @@ public class WeChatServiceImpl implements WeChatService {
     @Resource
     private AppService appService;
 
+    @Resource
+    private JsapiService jsapiService;
+
+    @Resource
+    private RefundService refundService;
+
     @Override
-    public String appPrepayCreate(PrepayRequest request) {
+    public String appPrepayCreate(com.wechat.pay.java.service.payments.app.model.PrepayRequest request) {
         try {
             request.setNotifyUrl(properties.getNotifyUrl());
-            PrepayResponse prepay = appService.prepay(request);
+            com.wechat.pay.java.service.payments.app.model.PrepayResponse prepay = appService.prepay(request);
             log.info("创建微信APP预支付订单成功 ===> {}", prepay.toString());
             return prepay.getPrepayId();
         } catch (Exception e) {
@@ -40,5 +48,33 @@ public class WeChatServiceImpl implements WeChatService {
             log.error("创建微信APP预支付订单失败 ===> {}", e.getMessage());
         }
         throw new ServiceException("创建创建微信APP预支付订单失败!");
+    }
+
+    @Override
+    public String jsapiPrepayCreate(com.wechat.pay.java.service.payments.jsapi.model.PrepayRequest request) {
+        try {
+            request.setNotifyUrl(properties.getNotifyUrl());
+            com.wechat.pay.java.service.payments.jsapi.model.PrepayResponse prepay = jsapiService.prepay(request);
+            log.info("创建微信JSAPI预支付订单成功 ===> {}", prepay.toString());
+            return prepay.getPrepayId();
+        } catch (Exception e) {
+            e.printStackTrace();
+            log.error("创建微信JSAPI预支付订单失败 ===> {}", e.getMessage());
+        }
+        throw new ServiceException("创建创建微信JSAPI预支付订单失败!");
+    }
+
+    @Override
+    public com.wechat.pay.java.service.refund.model.Refund refundCreate(com.wechat.pay.java.service.refund.model.CreateRequest request) {
+        try {
+            request.setNotifyUrl(properties.getNotifyUrl());
+            com.wechat.pay.java.service.refund.model.Refund refund = refundService.create(request);
+            log.info("创建微信退款订单成功 ===> {}", refund.toString());
+            return refund;
+        } catch (Exception e) {
+            e.printStackTrace();
+            log.error("创建微信退款订单失败 ===> {}", e.getMessage());
+        }
+        throw new ServiceException("创建创建微信退款订单失败!");
     }
 }

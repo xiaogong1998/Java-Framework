@@ -1,12 +1,8 @@
 package com.gong.baidu.translate.model;
 
-import cn.hutool.core.util.RandomUtil;
-import com.alibaba.fastjson.annotation.JSONField;
 import com.gong.baidu.translate.enums.LanguageEnum;
-import com.gong.core.utils.RandomCodeUtils;
 import lombok.Getter;
 import lombok.Setter;
-import sun.java2d.d3d.D3DScreenUpdateManager;
 
 import java.io.Serializable;
 

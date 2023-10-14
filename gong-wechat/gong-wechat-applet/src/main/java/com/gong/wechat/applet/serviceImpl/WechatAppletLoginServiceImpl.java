@@ -49,7 +49,7 @@ public class WechatAppletLoginServiceImpl implements WechatAppletLoginService {
             log.info("wechat applet response : {}", r);
             return JSONObject.parseObject(r, LoginResponse.class);
         }).orElse(null);
-        if (response == null || response.getErrCode() != 0) {
+        if (response == null) {
             log.info("微信小程序登录失败，1秒后重试");
             try {
                 Thread.sleep(1000);

@@ -9,6 +9,7 @@ import com.wechat.pay.java.service.payments.jsapi.JsapiService;
 import com.wechat.pay.java.service.payments.nativepay.NativePayService;
 import com.wechat.pay.java.service.refund.RefundService;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * TODO 微信支付配置
@@ -16,7 +17,7 @@ import org.springframework.context.annotation.Bean;
  * @author xiaogong
  * @since 2023/8/3 9:14
  */
-// @Configuration
+@Configuration
 public class WeChatPayConfiguration {
 
     @Bean
