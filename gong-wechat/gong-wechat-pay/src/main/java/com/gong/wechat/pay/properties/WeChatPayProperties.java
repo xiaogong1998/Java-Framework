@@ -1,8 +1,10 @@
 package com.gong.wechat.pay.properties;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
@@ -16,7 +18,7 @@ import java.io.Serializable;
 @Getter
 @Setter
 @Component
-@ConfigurationProperties(prefix = "wechat.pay.config",ignoreInvalidFields = false)
+@ConfigurationProperties(prefix = "wechat.config.pay", ignoreInvalidFields = false)
 public class WeChatPayProperties implements Serializable {
     private static final long serialVersionUID = -7707187860556296754L;
 

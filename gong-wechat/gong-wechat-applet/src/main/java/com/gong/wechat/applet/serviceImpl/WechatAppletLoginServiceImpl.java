@@ -6,6 +6,7 @@ import com.gong.wechat.applet.model.LoginRequest;
 import com.gong.wechat.applet.model.LoginResponse;
 import com.gong.wechat.applet.properties.WechatAppletProperties;
 import com.gong.wechat.applet.service.WechatAppletLoginService;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -49,8 +50,11 @@ public class WechatAppletLoginServiceImpl implements WechatAppletLoginService {
             log.info("wechat applet response : {}", r);
             return JSONObject.parseObject(r, LoginResponse.class);
         }).orElse(null);
-        if (response == null) {
+        if (response == null || StringUtils.isBlank(response.getOpenId())) {
             log.info("微信小程序登录失败，1秒后重试");
+            if (null != response) {
+                log.info("错误码：{}，错误原因：{}", response.getErrCode(), response.getErrMsg());
+            }
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {

@@ -1,6 +1,6 @@
 wechat:
-  pay:
-    config:
+  config:
+    pay:
       app-id: ??
       merchant-id: ??
       private-key: ??
