@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Getter
 @Setter
 @Component
-@ConfigurationProperties(prefix = "baidu.config.translate", ignoreUnknownFields = true)
+@ConfigurationProperties(prefix = "gong.baidu.config.translate", ignoreUnknownFields = true)
 public class BaiduTranslateProperties {
 
     private String appid;

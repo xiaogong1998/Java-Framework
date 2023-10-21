@@ -1,7 +1,12 @@
 package com.gong.core.utils;
 
+import cn.hutool.extra.qrcode.QrCodeUtil;
 import com.gong.core.enums.Base64Enum;
+import org.apache.commons.lang3.StringUtils;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -23,6 +28,24 @@ public class ImageUtils {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static String textToBase64(String text, String imageType) {
+        if (StringUtils.isBlank(text)) {
+            return null;
+        }
+        BufferedImage image = QrCodeUtil.generate(text, 300, 300);
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        try {
+            ImageIO.write(image, imageType, stream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "data:image/" + imageType + ";base64," + cn.hutool.core.codec.Base64.encode(stream.toByteArray());
+    }
+
+    public static String textToBase64(String text) {
+        return textToBase64(text, "png");
     }
 
     public static void main(String[] args) {

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Getter
 @Setter
 @Component
-@ConfigurationProperties(prefix = "qweather.config", ignoreUnknownFields = true)
+@ConfigurationProperties(prefix = "gong.qweather.config", ignoreUnknownFields = true)
 public class QweatherProperties {
 
     private String keyName;

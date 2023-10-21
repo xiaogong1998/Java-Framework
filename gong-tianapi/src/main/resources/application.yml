@@ -1,3 +1,4 @@
-tianapi:
-  config:
-    key: ??
+gong:
+  tianapi:
+    config:
+      key: ??

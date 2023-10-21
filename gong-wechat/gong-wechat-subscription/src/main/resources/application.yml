@@ -1,6 +1,7 @@
-wechat:
-  config:
-    mp:
-      apiUrl: https://api.weixin.qq.com
-      appId: ??
-      appSecret: ??
+gong:
+  wechat:
+    config:
+      mp:
+        apiUrl: https://api.weixin.qq.com
+        appId: ??
+        appSecret: ??

@@ -17,7 +17,7 @@ import java.io.Serializable;
 @Getter
 @Setter
 @Component
-@ConfigurationProperties(prefix = "aliyun.config.pay")
+@ConfigurationProperties(prefix = "gong.aliyun.config.pay")
 public class AliPayProperties implements Serializable {
     private static final long serialVersionUID = -7707187860556296754L;
 

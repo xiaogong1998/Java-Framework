@@ -18,7 +18,7 @@ import java.io.Serializable;
 @Getter
 @Setter
 @Component
-@ConfigurationProperties(prefix = "wechat.config.pay", ignoreInvalidFields = false)
+@ConfigurationProperties(prefix = "gong.wechat.config.pay", ignoreInvalidFields = false)
 public class WeChatPayProperties implements Serializable {
     private static final long serialVersionUID = -7707187860556296754L;
 

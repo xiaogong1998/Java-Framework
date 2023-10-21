@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Getter
 @Setter
 @Component
-@ConfigurationProperties(prefix = "hitokoto.config", ignoreUnknownFields = true)
+@ConfigurationProperties(prefix = "gong.hitokoto.config", ignoreUnknownFields = true)
 public class HitokotoProperties {
 
     private String apiUrl = "https://v1.hitokoto.cn";

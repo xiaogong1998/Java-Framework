@@ -40,6 +40,12 @@
         </dependency>
 
         <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>3.4.1</version>
+        </dependency>
+
+        <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>5.7.12</version>
@@ -90,6 +96,7 @@
             <artifactId>swagger-annotations</artifactId>
             <version>1.5.22</version>
         </dependency>
+
     </dependencies>
 
     <modules>
@@ -104,6 +111,7 @@
         <module>gong-tianapi</module>
         <module>gong-websocket</module>
         <module>gong-redisson</module>
+        <module>gong-smsbao</module>
     </modules>
 
     <build>

@@ -1,10 +1,11 @@
-wechat:
-  config:
-    pay:
-      app-id: ??
-      merchant-id: ??
-      private-key: ??
-      private-key-path: ??
-      merchant-serial-number: ??
-      api-v3-key: ??
-      notify-url: ??
+gong:
+  wechat:
+    config:
+      pay:
+        app-id: ??
+        merchant-id: ??
+        private-key: ??
+        private-key-path: ??
+        merchant-serial-number: ??
+        api-v3-key: ??
+        notify-url: ??

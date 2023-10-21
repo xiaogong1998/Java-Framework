@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Getter
 @Setter
 @Component
-@ConfigurationProperties(prefix = "tianapi.config", ignoreUnknownFields = true)
+@ConfigurationProperties(prefix = "gong.tianapi.config", ignoreUnknownFields = true)
 public class TianApiProperties {
 
     private String apiUrl = "https://apis.tianapi.com";

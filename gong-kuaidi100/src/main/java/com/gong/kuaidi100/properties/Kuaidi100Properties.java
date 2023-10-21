@@ -16,7 +16,7 @@ import java.io.Serializable;
 @Getter
 @Setter
 @Component
-@ConfigurationProperties(prefix = "kuaidi100.config")
+@ConfigurationProperties(prefix = "gong.kuaidi100.config")
 public class Kuaidi100Properties implements Serializable {
     private static final long serialVersionUID = -682036306220144150L;
 

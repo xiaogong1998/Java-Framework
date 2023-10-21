@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Getter
 @Setter
 @Component
-@ConfigurationProperties(prefix = "redisson.config", ignoreUnknownFields = true)
+@ConfigurationProperties(prefix = "gong.redisson.config", ignoreUnknownFields = true)
 public class RedissonProperties {
 
     /**

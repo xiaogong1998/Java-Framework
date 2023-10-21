@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Getter
 @Setter
 @Component
-@ConfigurationProperties(prefix = "aliyun.config.oss", ignoreUnknownFields = true)
+@ConfigurationProperties(prefix = "gong.aliyun.config.oss", ignoreUnknownFields = true)
 public class AliOssProperties {
 
     /**

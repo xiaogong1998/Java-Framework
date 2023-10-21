@@ -1,1 +1,8 @@
-a
+gong:
+  aliyun:
+    config:
+      oss:
+        access-key: ??
+        secret-key: ??
+        endpoint: ??
+        bucket-name: ??
