@@ -56,4 +56,9 @@ public class WeChatPayProperties implements Serializable {
      * 回调通知地址
      */
     private String notifyUrl;
+
+    /**
+     * 退款通知地址
+     */
+    private String refundNotifyUrl;
 }

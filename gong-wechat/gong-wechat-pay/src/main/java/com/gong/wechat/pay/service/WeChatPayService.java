@@ -2,6 +2,7 @@ package com.gong.wechat.pay.service;
 
 import com.wechat.pay.java.service.payments.jsapi.model.PrepayWithRequestPaymentResponse;
 import com.wechat.pay.java.service.payments.model.Transaction;
+import com.wechat.pay.java.service.refund.model.RefundNotification;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -46,5 +47,13 @@ public interface WeChatPayService {
      * @return 验签结果
      */
     Transaction tradeNotify(HttpServletRequest request);
+
+    /**
+     * 异步校验
+     *
+     * @param request   支付宝返回参数
+     * @return 验签结果
+     */
+    RefundNotification refundTradeNotify(HttpServletRequest request);
 
 }
