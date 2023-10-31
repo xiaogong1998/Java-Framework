@@ -59,6 +59,7 @@ public class BaiduTranslateServiceImpl implements BaiduTranslateService {
         url.append("&appid=").append(properties.getAppid());
         url.append("&salt=").append(salt);
         url.append("&sign=").append(SecureUtil.md5(sign));
+        log.info("baidu common text translate request url : {}", url);
         CommonTextResponse response = httpClient.get(url.toString()).map(r -> {
             log.info("baidu common text translate response : {}", r);
             return JSONObject.parseObject(r, CommonTextResponse.class);
@@ -71,7 +72,7 @@ public class BaiduTranslateServiceImpl implements BaiduTranslateService {
                 throw new RuntimeException(e);
             }
             // 重试次数
-            int maxRetry = 5;
+            int maxRetry = 1;
             if (retry < maxRetry) {
                 retry += 1;
                 return commonTextTranslate(request);

@@ -1,0 +1,7 @@
+gong:
+  redisson:
+    config:
+      address: 127.0.0.1:6379
+      database: 0
+      password: sa
+      enabled: true

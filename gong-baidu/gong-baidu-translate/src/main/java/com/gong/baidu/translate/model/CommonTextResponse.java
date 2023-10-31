@@ -6,6 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -32,7 +33,7 @@ public class CommonTextResponse implements Serializable {
      * 目标语言
      */
    @JSONField(name = "trans_result")
-   private List<TransResultModel> transResult;
+   private List<TransResultModel> transResult = new ArrayList<>();
 
     /**
      * 错误码

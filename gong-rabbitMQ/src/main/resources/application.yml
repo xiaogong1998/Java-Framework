@@ -1,0 +1,7 @@
+gong:
+  rabbitmq:
+    config:
+      host: ??
+      port: 5672
+      username: your_username
+      password: your_password
