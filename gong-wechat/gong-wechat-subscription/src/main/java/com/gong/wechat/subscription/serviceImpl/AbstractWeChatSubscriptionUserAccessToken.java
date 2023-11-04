@@ -18,7 +18,6 @@ import org.springframework.stereotype.Service;
  * @author xiaogong
  * @since 2023/10/27 17:37
  */
-@Service
 public abstract class AbstractWeChatSubscriptionUserAccessToken implements WeChatSubscriptionUserAccessToken {
 
     private final Logger log = LoggerFactory.getLogger(getClass());
@@ -54,7 +53,7 @@ public abstract class AbstractWeChatSubscriptionUserAccessToken implements WeCha
      */
     private WeChatSubscriptionUserTokenResponse accessToken(String code) {
         StringBuilder url = new StringBuilder();
-        url.append("https://api.weixin.qq.com/sns/oauth2/access_token").append("/sns/oauth2/access_token");
+        url.append(properties.getApiUrl()).append("/sns/oauth2/access_token");
         url.append("?appid=").append(properties.getAppId());
         url.append("&secret=").append(properties.getAppSecret());
         url.append("&code=").append(code);

@@ -8,6 +8,7 @@ import com.gong.wechat.subscription.enums.WeChatMessageErrEnum;
 import com.gong.wechat.subscription.properties.WeChatSubscriptionProperties;
 import com.gong.wechat.subscription.service.WeChatSubscriptionService;
 import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -40,6 +41,10 @@ public class WeChatSubscriptionServiceImpl implements WeChatSubscriptionService 
      * @param message 消息内容
      */
     public void sendText(String toUser, String templateId, Map<String, WeChatMessageTemplate> message) {
+        if(StringUtils.isBlank(toUser)){
+            log.error("toUsers is black.");
+            return;
+        }
         sendText(Collections.singletonList(toUser), templateId, message);
     }
 

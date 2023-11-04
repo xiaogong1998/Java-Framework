@@ -45,7 +45,7 @@ public abstract class AbstractWeChatSubscriptionAccessToken implements WeChatSub
     private WeChatAccessTokenResponse accessToken() {
         StringBuilder url = new StringBuilder();
         url.append(properties.getApiUrl()).append("/cgi-bin/token");
-        url.append("?grant_type=client_credential");
+        url.append("?grant_type=").append("client_credential");
         url.append("&appid=").append(properties.getAppId());
         url.append("&secret=").append(properties.getAppSecret());
         return httpClient.get(url.toString()).map(r -> {

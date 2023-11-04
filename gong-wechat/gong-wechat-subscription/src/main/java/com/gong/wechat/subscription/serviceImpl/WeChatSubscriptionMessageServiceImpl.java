@@ -83,18 +83,18 @@ public class WeChatSubscriptionMessageServiceImpl implements WeChatSubscriptionM
             return JSONObject.parseObject(r, WeChatMessageResponse.class);
         }).orElse(null);
 
-        // access_token已过期, 重新获取Token
+        // 如果推送不成功，重试
         if (response == null || !WeChatMessageErrEnum.RequestSucceeded.code().equals(response.getErrCode())) {
             try {
-                Thread.sleep(5000);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
 
             // 重试次数
-            int maxRetry = 5;
+            int maxRetry = 3;
             if (retry < maxRetry) {
-                log.info("订阅号 Token 过期, 重新刷新Token");
+                log.info("订阅号推送失败, 重试！ 第{}次", retry + 1);
                 retry += 1;
                 weChatSubscriptionAccessToken.refreshAccessToken();
                 return send(request);

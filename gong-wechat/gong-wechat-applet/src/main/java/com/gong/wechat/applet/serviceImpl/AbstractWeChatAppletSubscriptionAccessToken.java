@@ -5,8 +5,6 @@ import com.gong.core.utils.HttpClientUtil;
 import com.gong.wechat.applet.model.WeChatAppletAccessTokenResponse;
 import com.gong.wechat.applet.properties.WeChatAppletProperties;
 import com.gong.wechat.applet.service.WeChatAppletSubscriptionAccessToken;
-import com.gong.wechat.subscription.model.WeChatAccessTokenResponse;
-import com.gong.wechat.subscription.properties.WeChatSubscriptionProperties;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
