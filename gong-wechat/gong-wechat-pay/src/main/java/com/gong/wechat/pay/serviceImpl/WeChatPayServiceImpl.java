@@ -15,7 +15,10 @@ import com.wechat.pay.java.service.payments.jsapi.model.PrepayRequest;
 import com.wechat.pay.java.service.payments.jsapi.model.PrepayWithRequestPaymentResponse;
 import com.wechat.pay.java.service.payments.model.Transaction;
 import com.wechat.pay.java.service.refund.RefundService;
+import com.wechat.pay.java.service.refund.model.QueryByOutRefundNoRequest;
+import com.wechat.pay.java.service.refund.model.Refund;
 import com.wechat.pay.java.service.refund.model.RefundNotification;
+import com.wechat.pay.java.service.refund.model.Status;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -112,6 +115,26 @@ public class WeChatPayServiceImpl implements WeChatPayService {
             log.error("创建微信退款订单失败 ===> {}", e.getMessage());
         }
         throw new ServiceException("创建创建微信退款订单失败!");
+    }
+
+    public boolean refundQuery(String outRefundNo) {
+        try {
+            QueryByOutRefundNoRequest request = new QueryByOutRefundNoRequest();
+            request.setOutRefundNo(outRefundNo);
+            Refund refund = refundService.queryByOutRefundNo(request);
+            if (Status.SUCCESS.equals(refund.getStatus())) {
+                return true;
+            } else if (Status.PROCESSING.equals(refund.getStatus())) {
+                Thread.sleep(3000);
+                return refundQuery(outRefundNo);
+            } else {
+                return false;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            log.error("查询微信退款订单失败 ===> {}", e.getMessage());
+        }
+        return false;
     }
 
     @Override

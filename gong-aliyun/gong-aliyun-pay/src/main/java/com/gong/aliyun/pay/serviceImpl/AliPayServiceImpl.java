@@ -2,13 +2,13 @@ package com.gong.aliyun.pay.serviceImpl;
 
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;
-import com.alipay.api.domain.AlipayTradeAppPayModel;
-import com.alipay.api.domain.AlipayTradePagePayModel;
-import com.alipay.api.domain.AlipayTradeWapPayModel;
+import com.alipay.api.domain.*;
 import com.alipay.api.internal.util.AlipaySignature;
+import com.alipay.api.request.AlipayFundTransUniTransferRequest;
 import com.alipay.api.request.AlipayTradeAppPayRequest;
 import com.alipay.api.request.AlipayTradePagePayRequest;
 import com.alipay.api.request.AlipayTradeWapPayRequest;
+import com.alipay.api.response.AlipayFundTransUniTransferResponse;
 import com.alipay.api.response.AlipayTradeAppPayResponse;
 import com.alipay.api.response.AlipayTradePagePayResponse;
 import com.alipay.api.response.AlipayTradeWapPayResponse;
@@ -65,6 +65,7 @@ public class AliPayServiceImpl implements AliPayService {
         try {
             AlipayTradeWapPayRequest request = new AlipayTradeWapPayRequest();
             request.setNotifyUrl(aliPayProperties.getNotifyUrl());
+            request.setReturnUrl(aliPayProperties.getReturnUrl());
             request.setBizModel(model);
             AlipayTradeWapPayResponse response = alipayClient.pageExecute(request);
             if (response.isSuccess()) {
@@ -233,5 +234,28 @@ public class AliPayServiceImpl implements AliPayService {
 
         result = "success";
         return result;
+    }
+
+    public AlipayFundTransUniTransferResponse transferCreate(AlipayFundTransUniTransferModel model){
+        try {
+            model.setBizScene("DIRECT_TRANSFER");
+            model.setProductCode("TRANS_ACCOUNT_NO_PWD");
+            AlipayFundTransUniTransferRequest request = new AlipayFundTransUniTransferRequest();
+            request.setNotifyUrl(aliPayProperties.getNotifyUrl());
+            request.setReturnUrl(aliPayProperties.getReturnUrl());
+            request.setBizModel(model);
+            AlipayFundTransUniTransferResponse response = alipayClient.sdkExecute(request);
+            if (response.isSuccess()) {
+                log.info("调用支付宝单笔转账SDK支付成功 ===> {}", response.getBody());
+                return response;
+            } else {
+                log.info("调用支付宝单笔转账SDK支付失败，返回码 ===> {}，返回描述 ===> {}", response.getCode(), response.getMsg());
+                throw new ServiceException("创建支付宝单笔转账SDK交易订单失败，失败原因：" + response.getMsg());
+            }
+        } catch (AlipayApiException e) {
+            e.printStackTrace();
+            throw new ServiceException("创建支付宝单笔转账SDK交易订单失败!");
+        }
+
     }
 }

@@ -1,6 +1,7 @@
 package com.gong.baidu.translate.serviceImpl;
 
 import cn.hutool.core.util.RandomUtil;
+import cn.hutool.core.util.URLUtil;
 import cn.hutool.crypto.SecureUtil;
 import com.alibaba.fastjson.JSONObject;
 import com.gong.baidu.translate.enums.TranslationTypeEnum;
@@ -15,6 +16,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.nio.charset.Charset;
 
 /**
  * TODO 百度翻译

@@ -1,8 +1,10 @@
 package com.gong.aliyun.pay.service;
 
+import com.alipay.api.domain.AlipayFundTransUniTransferModel;
 import com.alipay.api.domain.AlipayTradeAppPayModel;
 import com.alipay.api.domain.AlipayTradePagePayModel;
 import com.alipay.api.domain.AlipayTradeWapPayModel;
+import com.alipay.api.response.AlipayFundTransUniTransferResponse;
 import com.gong.aliyun.pay.model.OrderModel;
 
 import java.util.Map;
@@ -73,4 +75,13 @@ public interface AliPayService {
      * @return 验签结果
      */
     String tradeNotify(Map<String, String> params, Function<String, OrderModel> function, Runnable runnable);
+
+
+    /**
+     * 提现到支付宝账户
+     * @param model
+     * @return
+     */
+    AlipayFundTransUniTransferResponse transferCreate(AlipayFundTransUniTransferModel model);
+
 }

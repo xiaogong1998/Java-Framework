@@ -27,9 +27,9 @@ public class AliPayConfiguration {
         alipayConfig.setFormat(aliPayProperties.getFormat());
         alipayConfig.setCharset(aliPayProperties.getCharset());
         alipayConfig.setSignType(aliPayProperties.getSignType());
-        alipayConfig.setAppCertPath(aliPayProperties.getAppCertPath());
-        alipayConfig.setAlipayPublicCertPath(aliPayProperties.getAipayPublicCertPath());
-        alipayConfig.setRootCertPath(aliPayProperties.getRootCertPath());
+//        alipayConfig.setAppCertPath(aliPayProperties.getAppCertPath());
+//        alipayConfig.setAlipayPublicCertPath(aliPayProperties.getAipayPublicCertPath());
+//        alipayConfig.setRootCertPath(aliPayProperties.getRootCertPath());
         alipayConfig.setPrivateKey(aliPayProperties.getPrivateKey());
         alipayConfig.setAlipayPublicKey(aliPayProperties.getAlipayPublicKey());
         return new DefaultAlipayClient(alipayConfig);
