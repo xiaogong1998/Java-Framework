@@ -3,6 +3,8 @@ package com.gong.core.bo;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 /**
  * TODO
  *
@@ -45,4 +47,23 @@ public class TreeNodeBO {
      * 节点数据
      */
     private Object data;
+    /**
+     * 子节点
+     */
+    private List<TreeNodeBO> children;
+
+    public TreeNodeBO() {
+    }
+
+    public TreeNodeBO(String id, String name, String icon, String parentId, String parentName, Long typeId, Boolean isEnabled, Object data, List<TreeNodeBO> children) {
+        this.id = id;
+        this.name = name;
+        this.icon = icon;
+        this.parentId = parentId;
+        this.parentName = parentName;
+        this.typeId = typeId;
+        this.isEnabled = isEnabled;
+        this.data = data;
+        this.children = children;
+    }
 }
